@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /*Phông chữ cho văn bản trong body là Arial, nếu khong có thì thay thế là sans-serifserif*/
+  background-color: #000; /* Màu nền*/
+  color: #fff; /*Màu chữ*/
+}
+#start-screen {
+  position: absolute; /*Đặt vị trí phần tử này là tuyệt đối*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/background.png") no-repeat center center; /*Sử dụng ảnh trong file background.jpg để làm ảnh nền*/
+  background-size: cover; /*Đảm bảo ảnh được phủ toàn màn hình*/
+  display: flex;
+  flex-direction: column; /*Đặt các phần tử theo cột*/
+  justify-content: center; /*Căn giữa các phần tử theo chiều dọc*/
+  align-items: center; /*Căn giữa các phần tử theo chiều ngang*/
+  z-index: 10;
+  transition: opacity 0.5s ease;
+}
+#game-container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ff0; /* Thêm viền vàng cho đẹp */
+  box-shadow: 0 0 20px #ff0; /* Hiệu ứng glow */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.title {
+  font-size: 3rem; /*Kích thước chữ: 3rem = 48px -> 1 rem = 16px đây là kích thước font mặc địnhđịnh*/
+  color: #ff0; /*Màu chữchữ*/
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; /*Đổ bóng cho chữ*/
+  margin-bottom: 2rem; /*Khoảng cách dưới phần tử là 32px32px*/
+}
+.input-container {
+  margin: 1rem 0;
+}
+#restart-btn {
+  position: absolute;
+  bottom: 45%;
+  left: 112%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff0;
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 20;
+}
+#restart-btn:hover {
+  background-color: #ff6;
+  transform: translateX(-50%) scale(1.1);
+}
+input {
+  padding: 0.5rem 1rem; /*Tạo khoảng cách giữa nội dung bên trong phần tử và viền của nó*/
+  font-size: 1rem;
+  border: 2px solid #ff0; /*Viền có độ dầy là 2px và nét liền(solid)*/
+  border-radius: 20px; /*Làm tròn các góc của viềnviền*/
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+button {
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  background-color: #ff0;
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer; /*Biến con trỏ thành bàn tay*/
+  transition: all 0.5s; /*Tạo hiệu ứng chuyển động*/
+}
+button:hover {
+  background-color: #ff6; /*Màu vàng khi hover*/
+  transform: scale(1.1); /*Phóng to nhẹ nhẹ*/
+}

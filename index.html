@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Pacman</title>
+  </head>
+</body>
+  <!-- Màn hình bắt đầu-->
+   <div id = "start-screen">
+    <h1 class="title">PACMAN GAME</h1>
+    <div class="input-container">
+      <input type="text" id="player-name" placeholder="Nhập tên của bạn!">
+    </div>
+    <button id="start-button">Bắt đầu trò chơi</button>
+   </div>
+
+  <!-- Màn hình trò chơi-->
+   <div id="game-container">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div style="display: none">
+      <img id="animation" src="assets/animations.gif" alt="" />
+      <img id="ghosts" src="assets/ghost.png" alt="" />
+    </div>
+    <button id="restart-btn" style="display: none">Chơi lại</button>
+   </div>
+
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
